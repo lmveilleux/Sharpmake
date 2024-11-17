@@ -19,7 +19,7 @@ namespace HelloAndroidAgde
 
     public abstract class CommonProject : Sharpmake.Project
     {
-        static public readonly Sharpmake.Options.Android.General.AndroidAPILevel AndroidMinSdkVersion = Sharpmake.Options.Android.General.AndroidAPILevel.Android29;
+        static public readonly Sharpmake.Options.Android.General.AndroidAPILevel AndroidMinSdkVersion = Sharpmake.Options.Android.General.AndroidAPILevel.Android24;
 
         protected CommonProject()
             : base(typeof(CommonTarget))
