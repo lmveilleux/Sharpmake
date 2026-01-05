@@ -699,7 +699,8 @@ namespace Sharpmake.Generators.FastBuild
                             // MSVC
                             scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "LanguageStandard", FileGeneratorUtilities.RemoveLineTag));
 
-                            scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "ClangEnableObjC_ARC", FileGeneratorUtilities.RemoveLineTag));
+                            // Commented out as this prevents ARC usage in Objective-C files 
+                            // scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "ClangEnableObjC_ARC", FileGeneratorUtilities.RemoveLineTag));
 
                             if (clangPlatformBff != null)
                                 clangFileLanguage = "-x c "; // Compiler option to indicate that its a C file
@@ -749,7 +750,8 @@ namespace Sharpmake.Generators.FastBuild
                             // MSVC
                             scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "LanguageStandard_C", FileGeneratorUtilities.RemoveLineTag));
 
-                            scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "ClangEnableObjC_ARC", FileGeneratorUtilities.RemoveLineTag));
+                            // Commented out as this prevents ARC usage in Objective-C++ files 
+                            // scopedOptions.Add(new Options.ScopedOption(confCmdLineOptions, "ClangEnableObjC_ARC", FileGeneratorUtilities.RemoveLineTag));
 
                             // if files are specifically c++, we need to add the language flag to make sure the compiler sees them as c++
                             if (isCompileAsCPPFile && clangPlatformBff != null)
